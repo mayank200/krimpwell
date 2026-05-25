@@ -1,0 +1,55 @@
+.contactSection {
+  padding: 6rem 0;
+  background-color: #061c3f; /* Darker navy blue for footer */
+  color: var(--text-light);
+  position: relative;
+  border-top: 4px solid var(--accent-color);
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contactItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+}
+
+.contactItem h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+  font-weight: 600;
+}
+
+.contactItem p, .contactItem a {
+  color: rgba(255,255,255,0.8);
+  transition: var(--transition);
+}
+
+.contactItem a:hover {
+  color: var(--accent-color);
+}
+
+.footerBottom {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  text-align: center;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.6);
+}

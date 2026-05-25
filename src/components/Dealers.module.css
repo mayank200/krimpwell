@@ -1,0 +1,69 @@
+.dealersSection {
+  padding: 6rem 0;
+  background-color: var(--bg-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+}
+
+.marqueeContainer {
+  position: relative;
+  width: 100%;
+  padding: 2rem 0;
+  background: white;
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+}
+
+/* Fading edges for the marquee */
+.marqueeContainer::before,
+.marqueeContainer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 150px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.marqueeContainer::before {
+  left: 0;
+  background: linear-gradient(to right, white, transparent);
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.marqueeContainer::after {
+  right: 0;
+  background: linear-gradient(to left, white, transparent);
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.logoWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px; /* Fixed width for uniform scrolling */
+  height: 120px;
+  padding: 1rem;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: grayscale(100%) opacity(0.7);
+}
+
+.logoWrapper:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%) opacity(1);
+}
+
+.dealerLogo {
+  max-width: 100%;
+  max-height: 100%;
+}
