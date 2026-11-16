@@ -11,7 +11,7 @@
 }
 
 .productCard {
-  background: white;
+  background: var(--surface);
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0,0,0,0.05);
@@ -65,7 +65,7 @@
 .productInfo {
   padding: 1.25rem;
   text-align: center;
-  background: white;
+  background: var(--surface);
   flex-grow: 1;
   display: flex;
   align-items: center;

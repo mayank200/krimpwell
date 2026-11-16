@@ -16,7 +16,7 @@
   position: relative;
   width: 100%;
   padding: 2rem 0;
-  background: white;
+  background: var(--surface);
   border-radius: 12px;
   box-shadow: var(--box-shadow);
 }
@@ -35,14 +35,14 @@
 
 .marqueeContainer::before {
   left: 0;
-  background: linear-gradient(to right, white, transparent);
+  background: linear-gradient(to right, var(--surface), transparent);
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
 }
 
 .marqueeContainer::after {
   right: 0;
-  background: linear-gradient(to left, white, transparent);
+  background: linear-gradient(to left, var(--surface), transparent);
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
 }
@@ -54,6 +54,8 @@
   width: 200px; /* Fixed width for uniform scrolling */
   height: 120px;
   padding: 1rem;
+  background: var(--logo-bg);
+  border-radius: 14px;
   transition: transform 0.3s ease, filter 0.3s ease;
   filter: grayscale(100%) opacity(0.7);
 }

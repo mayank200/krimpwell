@@ -1,6 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
+html[data-theme="dark"] {
+  --primary-color: #5b9bf0;
+  --bg-color: #0d1117;
+  --text-main: #e6edf3;
+  --text-muted: #9aa4b2;
+  --surface: #161b22;
+  --surface-glass: rgba(22, 27, 34, 0.97);
+  --text-body: #b6c0cc;
+  --glass-bg: rgba(22, 27, 34, 0.9);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.4);
+  --hover-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --hero-from: #101826;
+  --hero-to: #05080d;
+  --footer-bg: #05080d;
+  --logo-bg: #ffffff;
+  color-scheme: dark;
+}
+
 :root {
+  --surface: #ffffff;
+  --hero-from: #0b4391;
+  --hero-to: #061c3f;
+  --footer-bg: #061c3f;
+  --logo-bg: transparent;
+  --surface-glass: rgba(255, 255, 255, 0.98);
+  --text-body: #555555;
   --primary-color: #0b4391; /* Deep professional blue */
   --secondary-color: #007bff; /* Vibrant blue */
   --accent-color: #f39c12; /* Warning/accent orange often used in B2B electrical */
@@ -27,6 +53,7 @@ html {
 }
 
 body {
+  transition: background-color 0.3s ease, color 0.3s ease;
   font-family: 'Inter', sans-serif;
   background-color: var(--bg-color);
   color: var(--text-main);

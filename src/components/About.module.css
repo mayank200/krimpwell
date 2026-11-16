@@ -13,7 +13,7 @@
 .aboutCard {
   padding: 3rem;
   border-radius: 20px;
-  background: white;
+  background: var(--surface);
   box-shadow: 0 10px 30px rgba(0,0,0,0.05);
   transition: var(--transition);
   height: 100%;
@@ -35,7 +35,7 @@
 }
 
 .aboutCard p {
-  color: #555;
+  color: var(--text-body);
   font-size: 1.1rem;
   line-height: 1.8;
 }

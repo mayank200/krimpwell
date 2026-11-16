@@ -18,9 +18,9 @@ export default function Hero() {
           <p><small>PROPRIETOR</small></p>
         </div>
       </div>
-      <div className={styles.scrollDown}>
+      <a href="#about" className={styles.scrollDown} aria-label="Scroll to next section">
         ↓
-      </div>
+      </a>
     </section>
   );
 }

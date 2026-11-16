@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(circle at center, #0b4391 0%, #061c3f 100%);
+  background: radial-gradient(circle at center, var(--hero-from) 0%, var(--hero-to) 100%);
   color: var(--text-light);
   text-align: center;
   position: relative;
@@ -97,6 +97,13 @@
   font-size: 2rem;
   z-index: 2;
   color: rgba(255,255,255,0.7);
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: color 0.2s ease;
+}
+
+.scrollDown:hover {
+  color: #fff;
 }
 
 @keyframes bounce {

@@ -1,6 +1,6 @@
 .contactSection {
   padding: 6rem 0;
-  background-color: #061c3f; /* Darker navy blue for footer */
+  background-color: var(--footer-bg); /* Darker navy blue for footer */
   color: var(--text-light);
   position: relative;
   border-top: 4px solid var(--accent-color);

@@ -7,6 +7,12 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const toggleTheme = () => {
+    const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    document.documentElement.dataset.theme = next;
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -28,6 +34,19 @@ export default function Navbar() {
         <div className={styles.logo}>
           <a href="#" onClick={closeMenu}>KRIMPWELL</a>
         </div>
+
+        <button
+          type="button"
+          className={styles.themeToggle}
+          onClick={toggleTheme}
+          aria-label="Toggle dark mode"
+          title="Toggle day / night mode"
+        >
+          <span className={styles.knob}>
+            <span className={styles.iconSun}>☀️</span>
+            <span className={styles.iconMoon}>🌙</span>
+          </span>
+        </button>
 
         <button
           type="button"
