@@ -5,6 +5,7 @@ import styles from './Navbar.module.css';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,17 +20,34 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const closeMenu = () => setMenuOpen(false);
+
   return (
-    <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
+    <nav className={`${styles.navbar} ${scrolled || menuOpen ? styles.scrolled : ''}`}>
       <div className={`container ${styles.navContainer}`}>
         <div className={styles.logo}>
-          <a href="#">KRIMPWELL</a>
+          <a href="#" onClick={closeMenu}>KRIMPWELL</a>
         </div>
-        <ul className={styles.navLinks}>
-          <li><a href="#about">About</a></li>
-          <li><a href="#dealers">Dealers</a></li>
-          <li><a href="#products">Products</a></li>
-          <li><a href="#contact">Contact</a></li>
+
+        <button
+          type="button"
+          className={styles.menuToggle}
+          onClick={() => setMenuOpen((prev) => !prev)}
+          aria-label="Toggle navigation menu"
+          aria-expanded={menuOpen}
+        >
+          <span className={`${styles.hamburger} ${menuOpen ? styles.open : ''}`} />
+        </button>
+
+        {menuOpen && (
+          <div className={styles.backdrop} onClick={closeMenu} aria-hidden="true" />
+        )}
+
+        <ul className={`${styles.navLinks} ${menuOpen ? styles.navLinksOpen : ''}`}>
+          <li><a href="#about" onClick={closeMenu}>About</a></li>
+          <li><a href="#dealers" onClick={closeMenu}>Dealers</a></li>
+          <li><a href="#products" onClick={closeMenu}>Products</a></li>
+          <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
         </ul>
       </div>
     </nav>

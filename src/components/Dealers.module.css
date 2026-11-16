@@ -67,3 +67,26 @@
   max-width: 100%;
   max-height: 100%;
 }
+
+@media (max-width: 768px) {
+  .dealersSection {
+    padding: 3.5rem 0;
+  }
+
+  .subtitle {
+    margin-bottom: 1.75rem;
+    font-size: 0.98rem;
+  }
+
+  .marqueeContainer::before,
+  .marqueeContainer::after {
+    width: 40px;
+  }
+
+  .logoWrapper {
+    width: 130px;
+    height: 85px;
+    padding: 0.5rem;
+    filter: grayscale(0%) opacity(1);
+  }
+}
